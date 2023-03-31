@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/* MENU */
+.nav-bar-mobile {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LOGO & MENU ICONS */
+.bookmark-logo {
+  width: 35%;
+  margin: 25px;
+}
+
+.menu-icon {
+  display: block;
+  width: 5%;
+  height: 5%;
+  margin: 25px;
+}
+
+.mobile-menu-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 165px;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav button {
+  background-color: hsl(229, 8%, 60%);
+  color: white;
+  border: none;
+}
+
+.computer-img {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 96%;
+}
+
+/* HERO SECTION */
+.hero-section {
+  text-align: center;
+  margin: 60px 0px;
+}
+
+.hero-section p {
+  color: hsl(229, 8%, 60%);
+  margin: 15px;
+  line-height: 27px;
+}
+
+/* FEATURES SECTION */
+.feature-section {
+  text-align: center;
+  margin: 60px 0px;
+}
+
+.feature-section p {
+  color: hsl(229, 8%, 60%);
+  margin: 15px;
+  line-height: 27px;
+}
+
+/* BOOKMARK SECTION */
+.bookmark-section {
+  text-align: center;
+  margin: 60px 0px;
+}
+
+.bookmark-section p {
+  color: hsl(229, 8%, 60%);
+  margin: 15px;
+  line-height: 27px;
+}
+
+/* EXTENSION SECTION */
+.download-extension-section {
+  text-align: center;
+  margin: 60px 0px;
+}
+
+.download-extension-section p {
+  color: hsl(229, 8%, 60%);
+  margin: 15px;
+  line-height: 27px;
+}
+
+.minimum-version {
+  color: hsl(229, 8%, 60%);
+}
+
+/* FAQ SECTION */
+.faq-section {
+  text-align: center;
+  margin: 60px 0px;
+}
+
+.faq-section p {
+  color: hsl(229, 8%, 60%);
+  margin: 15px;
+  line-height: 27px;
+}
+
+/* stay up to date with us footer */
+.stay-uptodate-with-us-section {
+  text-align: center;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-family: "Rubik", sans-serif;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px;
+}
+
+.contact-us-btn {
+  background-color: red;
+  color: white;
+  border: solid red;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px;
+}
+
+footer {
+  background-color: hsl(229, 31%, 21%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+footer img {
+  width: 10%;
+  height: 10%;
+}
+
+.footer-bookmark-logo {
+  width: 35%;
+  margin: 25px;
+  align-self: center;
+}
