@@ -18,21 +18,17 @@ body {
   margin: 25px;
 }
 
-.menu-icon {
+/* hamburger icon */
+.hamburger-menu-icon {
   display: block;
   width: 5%;
   height: 5%;
   margin: 25px;
 }
 
+/* hidden */
 .desktop-nav {
   display: none;
-}
-
-.mobile-nav button {
-  background-color: hsl(229, 8%, 60%);
-  color: white;
-  border: none;
 }
 
 .mobile-bookmark-logo {
@@ -41,23 +37,32 @@ body {
   margin: 25px;
 }
 
+/* close menu icon DONE */
 .icon-close {
   position: relative;
   right: 40px;
   width: 20px;
-
   margin-left: auto;
   height: fit-content;
   top: 25px;
 }
 
-.mobile-menu {
+.close-menu {
+  transition: 1s;
+  margin-right: 425px;
+}
+
+/* closes menu when click hamburger */
+.open-menu {
   background-color: hsl(229, 31%, 21%, 0.9);
   position: absolute;
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  transition: margin-right 0.5s ease;
+  margin-left: -425px;
+  height: 100%;
 }
 
 .mobile-menu-open-nav {
@@ -114,7 +119,7 @@ hr {
 }
 
 .nav-social-media-buttons img {
-  margin: 120px 20px;
+  margin: 40% 20px;
 }
 
 /* HERO SECTION */
@@ -312,6 +317,7 @@ input {
   background-color: red;
   color: white;
   border: solid red;
+  font-weight: 600;
   border-radius: 5px;
   padding: 15px;
   margin: 20px;
@@ -335,9 +341,24 @@ footer img {
 }
 
 .footer-bookmark-logo {
+  filter: invert(100%);
   width: 35%;
   margin: 25px;
   align-self: center;
+}
+
+footer button {
+  background-color: hsl(229, 31%, 21%, 0);
+  color: white;
+  font-size: initial;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 15px;
+  border: none;
+}
+
+.footer-social-media-buttons img {
+  margin: 30px 25px;
 }
 
 @media screen and (min-width: 1440px) {
