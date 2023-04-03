@@ -25,14 +25,6 @@ body {
   margin: 25px;
 }
 
-.mobile-menu-open {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 165px;
-  background-color: blueviolet;
-}
-
 .desktop-nav {
   display: none;
 }
@@ -43,6 +35,89 @@ body {
   border: none;
 }
 
+.mobile-bookmark-logo {
+  filter: invert(100%);
+  width: 35%;
+  margin: 25px;
+}
+
+.icon-close {
+  position: relative;
+  right: 40px;
+  width: 20px;
+
+  margin-left: auto;
+  height: fit-content;
+  top: 25px;
+}
+
+.mobile-menu {
+  background-color: hsl(229, 31%, 21%, 0.9);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.mobile-menu-open-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-menu button {
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 15px;
+  font-size: initial;
+}
+
+.mobile-menu button:hover {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 20px 40px;
+}
+
+hr {
+  width: 80vw;
+}
+
+.top-nav-features {
+  color: white;
+  background-color: hsl(229, 31%, 21%, 0);
+  border: none;
+}
+
+.top-nav-pricing {
+  color: white;
+  background-color: hsl(229, 31%, 21%, 0);
+  border: none;
+}
+
+.top-nav-contact {
+  color: white;
+  background-color: hsl(229, 31%, 21%, 0);
+  border: none;
+}
+
+.top-nav-login {
+  color: white;
+  background-color: hsl(229, 31%, 21%, 0);
+  border: none;
+}
+
+.nav-social-media-buttons {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.nav-social-media-buttons img {
+  margin: 120px 20px;
+}
+
+/* HERO SECTION */
 .computer-img {
   width: 70%;
   display: block;
@@ -51,7 +126,6 @@ body {
   width: 96%;
 }
 
-/* HERO SECTION */
 .hero-section {
   text-align: center;
   margin: 60px 0px;
