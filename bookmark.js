@@ -1,4 +1,4 @@
-// MOBILE MENU FUNCTIONALITY
+// MOBILE MENU FUNCTIONALITY DONE
 const openMobileMenuButton = document.getElementById("hamburger-menu-icon");
 const closeMobileMenuButton = document.getElementById("icon-close");
 const mobileMenu = document.querySelector(".mobile-menu");
@@ -13,7 +13,7 @@ closeMobileMenuButton.addEventListener("click", function () {
   mobileMenu.classList.add("close-menu");
 });
 
-// FEATURES WITH BUTTONS (3 TABS)
+// FEATURES WITH BUTTONS (3 TABS) needs fixing
 const simpleBookmarkingButton = document.getElementById("simple-bookmarking");
 const simpleBookmarkingContainer = document.getElementById(
   "simple-bookmarking-container"
@@ -33,17 +33,44 @@ simpleBookmarkingButton.addEventListener("click", function () {
 
 // features-section speedy searching button displays "intelligent search" paragraph
 speedySearchingButton.addEventListener("click", function () {
+  speedySearchingContainer.style.display = "block";
   simpleBookmarkingContainer.style.display = "none";
   easySharingContainer.style.display = "none";
 });
 
 // features-section easy sharing button displays "share your bookmarks" paragraph
 easySharingButton.addEventListener("click", function () {
+  easySharingContainer.style.display = "block";
   simpleBookmarkingContainer.style.display = "none";
   speedySearchingContainer.style.display = "none";
 });
 
 // FAQ TOGGLE SECTION
+
+// when click/toggle faqs, faq 1 display: flex or none
+const faqQuestion1 = document.querySelector(".faq-question-1");
+const faqAnswer1 = document.querySelector(".faq-answer-1");
+faqQuestion1.addEventListener("click", function () {
+  faqAnswer1.classList.toggle("collapse-faq-answer");
+});
+
+const faqQuestion2 = document.querySelector(".faq-question-2");
+const faqAnswer2 = document.querySelector(".faq-answer-2");
+faqQuestion2.addEventListener("click", function () {
+  faqAnswer2.classList.toggle("collapse-faq-answer");
+});
+
+const faqQuestion3 = document.querySelector(".faq-question-3");
+const faqAnswer3 = document.querySelector(".faq-answer-3");
+faqQuestion3.addEventListener("click", function () {
+  faqAnswer3.classList.toggle("collapse-faq-answer");
+});
+
+const faqQuestion4 = document.querySelector(".faq-question-4");
+const faqAnswer4 = document.querySelector(".faq-answer-4");
+faqQuestion4.addEventListener("click", function () {
+  faqAnswer4.classList.toggle("collapse-faq-answer");
+});
 
 // EMAIL VERIFICATION
 // grab email and error message by id
