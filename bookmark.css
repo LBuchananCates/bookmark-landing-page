@@ -70,7 +70,7 @@ body {
   height: 100vh;
   width: 100vw;
   transition: margin-right 0.5s ease;
-  margin-left: -425px;
+  margin-left: -103%;
   height: 100%;
 }
 
@@ -210,13 +210,16 @@ hr {
   line-height: 27px;
 }
 
-.more-info-button {
-  color: white;
-  background-color: hsl(231, 69%, 60%);
-  border: solid hsl(231, 69%, 60%);
-  border-radius: 8px;
-  padding: 15px 30px;
-  font-weight: 600;
+#simple-bookmarking-container {
+  display: none;
+}
+
+#speedy-searching-container {
+  display: none;
+}
+
+#easy-sharing-container {
+  display: none;
 }
 
 /* images for 3 diff features of bookmark section */
@@ -228,6 +231,16 @@ hr {
   margin-left: auto;
   margin-right: auto;
   width: 96%;
+}
+
+/* more info button */
+.more-info-button {
+  color: white;
+  background-color: hsl(231, 69%, 60%);
+  border: solid hsl(231, 69%, 60%);
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-weight: 600;
 }
 
 /* EXTENSION SECTION */
@@ -287,9 +300,16 @@ hr {
   padding: 15px;
 }
 
-.faq-question {
+.faq-question-1,
+.faq-question-2,
+.faq-question-3,
+.faq-question-4 {
   font-weight: 500;
   padding: 10px;
+}
+
+.collapse-faq-answer {
+  display: none;
 }
 
 .arrow {
@@ -335,6 +355,12 @@ input {
   margin: 20px;
 }
 
+/* error message for email verification */
+.error-message {
+  /* background-color: red; cancelling out red background color due to priority styles on uptodate section */
+  color: white;
+}
+
 .contact-us-btn {
   background-color: red;
   color: white;
@@ -350,6 +376,7 @@ input {
   border: solid hsl(0, 94%, 66%);
 }
 
+/* footer styles */
 footer {
   background-color: hsl(229, 31%, 21%);
   text-align: center;
