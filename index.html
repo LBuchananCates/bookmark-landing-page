@@ -96,49 +96,59 @@
         Simple Bookmarking
       </button>
       <hr />
-      <button class="speedy-searching">Speedy Searching</button>
+      <button class="speedy-searching" id="speedy-searching">
+        Speedy Searching
+      </button>
       <hr />
-      <button class="easy-sharing">Easy Sharing</button>
+      <button class="easy-sharing" id="easy-sharing">Easy Sharing</button>
       <hr />
     </div>
 
+    <!-- style these in CSS to prevent console.log error messages -->
     <div class="bookmark-section">
-      <img
-        src="./images/illustration-hero.svg"
-        alt="hero-img"
-        class="tab-1-img"
-      />
-      <h2 class="simple-bookmarking-title">Bookmark in one click</h2>
-      <p>
-        Organize your bookmarks however you like. Our simple drag-and-drop
-        interface gives you complete control over how you manage your favourite
-        sites.
-      </p>
-      <button class="more-info-button">More Info</button>
+      <div id="simple-bookmarking-container">
+        <img
+          src="./images/illustration-hero.svg"
+          alt="hero-img"
+          class="tab-1-img"
+        />
 
-      <img
-        src="./images/illustration-features-tab-2.svg"
-        alt="magnifying-glass-icon"
-        class="tab-2-img"
-      />
-      <h2 class="speedy-searching-title">Intelligent search</h2>
-      <p>
-        Our powerful search feature will help you find saved sites in no time at
-        all. No need to trawl through all of your bookmarks.
-      </p>
-      <button class="more-info-button">More Info</button>
+        <h2 class="simple-bookmarking-title">Bookmark in one click</h2>
+        <p>
+          Organize your bookmarks however you like. Our simple drag-and-drop
+          interface gives you complete control over how you manage your
+          favourite sites.
+        </p>
+        <button class="more-info-button">More Info</button>
+      </div>
 
-      <img
-        src="./images/illustration-features-tab-3.svg"
-        alt="zoom-call-icon"
-        class="tab-3-img"
-      />
-      <h2 class="easy-sharing-title">Share your bookmarks</h2>
-      <p>
-        Easily share your bookmarks and collections with others. Create a
-        shareable link that you can send at the click of a button.
-      </p>
-      <button class="more-info-button">More Info</button>
+      <div id="speedy-searching-container" class="hidden">
+        <img
+          src="./images/illustration-features-tab-2.svg"
+          alt="magnifying-glass-icon"
+          class="tab-2-img"
+        />
+        <h2 class="speedy-searching-title">Intelligent search</h2>
+        <p>
+          Our powerful search feature will help you find saved sites in no time
+          at all. No need to trawl through all of your bookmarks.
+        </p>
+        <button class="more-info-button">More Info</button>
+      </div>
+
+      <div id="easy-sharing-container" class="hidden">
+        <img
+          src="./images/illustration-features-tab-3.svg"
+          alt="zoom-call-icon"
+          class="tab-3-img"
+        />
+        <h2 class="easy-sharing-title">Share your bookmarks</h2>
+        <p>
+          Easily share your bookmarks and collections with others. Create a
+          shareable link that you can send at the click of a button.
+        </p>
+        <button class="more-info-button">More Info</button>
+      </div>
     </div>
 
     <div class="download-extension-section">
@@ -182,40 +192,65 @@
       </p>
 
       <div class="faq">
-        <div class="faq-question">What is Bookmark?</div>
-        <span class="arrow"></span>
-        <p>
+        <div class="faq-question-1">
+          What is Bookmark?
+          <img src="./images/icon-arrow.svg" alt="arrow-icon" class="arrow" />
+        </div>
+
+        <p class="faq-answer-1 collapse-faq-answer">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
           tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis
           quam ornare mattis.
         </p>
+        <hr />
 
-        <div class="faq-question">How can I request a new browser?</div>
-        <span class="arrow"></span>
-        <p>
+        <div class="faq-question-2">
+          How can I request a new browser?<img
+            src="./images/icon-arrow.svg"
+            alt="arrow-icon"
+            class="arrow"
+          />
+        </div>
+
+        <p class="faq-answer-2 collapse-faq-answer">
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
           ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
           aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
           Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
           Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
         </p>
+        <hr />
 
-        <div class="faq-question">Is there a mobile app?</div>
-        <span class="arrow"></span>
-        <p>
+        <div class="faq-question-3">
+          Is there a mobile app?<img
+            src="./images/icon-arrow.svg"
+            alt="arrow-icon"
+            class="arrow"
+          />
+        </div>
+
+        <p class="faq-answer-3 collapse-faq-answer">
           Sed consectetur quam id neque fermentum accumsan. Praesent luctus
           vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
           quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex
           et ultricies bibendum.
         </p>
+        <hr />
 
-        <div class="faq-question">What about other Chromium browsers?</div>
-        <span class="arrow"></span>
-        <p>
+        <div class="faq-question-4">
+          What about other Chromium browsers?<img
+            src="./images/icon-arrow.svg"
+            alt="arrow-icon"
+            class="arrow"
+          />
+        </div>
+
+        <p class="faq-answer-4 collapse-faq-answer">
           Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
           mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque
           non ut velit.
         </p>
+        <hr />
 
         <button class="more-info-button">More Info</button>
       </div>
@@ -229,7 +264,9 @@
         name="email"
         id="email"
         placeholder="Enter your email address"
+        onclick="validation()"
       />
+      <div id="error-message">Whoops, make sure it's an email</div>
       <button class="contact-us-btn">Contact Us</button>
     </div>
 
