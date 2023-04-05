@@ -25,29 +25,28 @@ const speedySearchingContainer = document.getElementById(
 const easySharingButton = document.getElementById("easy-sharing");
 const easySharingContainer = document.getElementById("easy-sharing-container");
 
-// features-section simple bookmarking button displays "bookmark in one click" paragraph WORKS BUT OTHERS DON'T
+// displays "bookmark in one click" paragraph WORKS but when refresh, all 3 display
 simpleBookmarkingButton.addEventListener("click", function () {
-  speedySearchingContainer.style.display = "none";
-  easySharingContainer.style.display = "none";
+  simpleBookmarkingContainer.classList.remove("hidden");
+  easySharingContainer.classList.add("hidden");
+  speedySearchingContainer.classList.add("hidden");
 });
 
-// features-section speedy searching button displays "intelligent search" paragraph
+// displays "intelligent search" paragraph
 speedySearchingButton.addEventListener("click", function () {
-  speedySearchingContainer.style.display = "block";
-  simpleBookmarkingContainer.style.display = "none";
-  easySharingContainer.style.display = "none";
+  speedySearchingContainer.classList.remove("hidden");
+  simpleBookmarkingContainer.classList.add("hidden");
+  easySharingContainer.classList.add("hidden");
 });
 
-// features-section easy sharing button displays "share your bookmarks" paragraph
+// displays "share your bookmarks" paragraph
 easySharingButton.addEventListener("click", function () {
-  easySharingContainer.style.display = "block";
-  simpleBookmarkingContainer.style.display = "none";
-  speedySearchingContainer.style.display = "none";
+  easySharingContainer.classList.remove("hidden");
+  speedySearchingContainer.classList.add("hidden");
+  simpleBookmarkingContainer.classList.add("hidden");
 });
 
-// FAQ TOGGLE SECTION
-
-// when click/toggle faqs, faq 1 display: flex or none
+// FAQ SECTION TOGGLES
 const faqQuestion1 = document.querySelector(".faq-question-1");
 const faqAnswer1 = document.querySelector(".faq-answer-1");
 faqQuestion1.addEventListener("click", function () {
