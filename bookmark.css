@@ -27,7 +27,7 @@ body {
 }
 
 /* hidden */
-.desktop-nav {
+.nav-bar-desktop {
   display: none;
 }
 
@@ -204,22 +204,15 @@ hr {
   margin: 60px 0px;
 }
 
+/* hidden class for features */
+.hidden {
+  display: none;
+}
+
 .bookmark-section p {
   color: hsl(229, 8%, 60%);
   margin: 15px;
   line-height: 27px;
-}
-
-#simple-bookmarking-container {
-  display: none;
-}
-
-#speedy-searching-container {
-  display: none;
-}
-
-#easy-sharing-container {
-  display: none;
 }
 
 /* images for 3 diff features of bookmark section */
@@ -291,7 +284,7 @@ hr {
 
 .faq-section p {
   color: hsl(229, 8%, 60%);
-  margin: 15px;
+  padding: 0px 20px;
   line-height: 27px;
 }
 
@@ -305,7 +298,7 @@ hr {
 .faq-question-3,
 .faq-question-4 {
   font-weight: 500;
-  padding: 10px;
+  padding: 20px;
 }
 
 .collapse-faq-answer {
@@ -316,25 +309,9 @@ hr {
   /* background-image: url(./images/icon-arrow.svg); UNSURE HOW TO GET TO APPEAR */
 }
 
-.arrow::before,
-.arrow::after {
-  position: relative;
-  content: "";
-  display: block;
-  width: 10px;
-  height: 1px;
-  background: white;
-  transition: 0.3s ease-in-out;
-}
-
-.arrow::before {
-  transform: rotate(45deg);
-}
-
-.arrow::after {
-  left: 6px;
-  top: -1px;
-  transform: rotate(-45deg);
+/* add this class when click faq questions */
+.open-arrow {
+  transform: rotate(180deg);
 }
 
 /* stay up to date with us footer */
@@ -411,4 +388,124 @@ footer button {
 }
 
 @media screen and (min-width: 1440px) {
+  /* nav bars & buttons */
+  .nav-bar-mobile {
+    display: none;
+  }
+
+  .nav-bar-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-bar-desktop-buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin: 0px 40px;
+  }
+
+  .desktop-nav-features,
+  .desktop-nav-pricing,
+  .desktop-nav-contact {
+    background-color: white;
+    margin: 0px 20px;
+    text-transform: uppercase;
+    font-size: larger;
+    border: none;
+  }
+
+  .desktop-nav-login {
+    background-color: red;
+    color: white;
+    margin: 0px 20px;
+    text-transform: uppercase;
+    font-size: larger;
+    border: solid red;
+    border-radius: 7px;
+    padding: 13px 35px;
+  }
+
+  /* hero section */
+  .hero-section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .hero-section div {
+    align-self: center;
+    text-align: left;
+    padding: 0px 145px;
+  }
+
+  .hero-section div .title {
+    font-size: xxx-large;
+  }
+
+  .hero-section p {
+    margin: 0;
+    line-height: 40px;
+    font-size: x-large;
+  }
+
+  .hero-section button {
+    margin: 25px 0px;
+    font-size: larger;
+  }
+
+  /* features section */
+  .features-title {
+    font-size: xxx-large;
+  }
+
+  .features-section p {
+    margin: 25px 420px;
+    font-size: x-large;
+    line-height: 40px;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .features-section button {
+    flex-direction: row;
+  }
+
+  .bookmark-section img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #simple-bookmarking-container,
+  #speedy-searching-container,
+  #easy-sharing-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #simple-bookmarking-container div {
+    align-self: center;
+    text-align: left;
+  }
+  #speedy-searching-container div {
+    align-self: center;
+    text-align: left;
+  }
+  #easy-sharing-container {
+    align-self: center;
+    text-align: left;
+  }
+
+  /* extension options */
+  .extension-options {
+  }
+
+  /* footer section */
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
