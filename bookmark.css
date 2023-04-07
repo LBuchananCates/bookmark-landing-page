@@ -134,12 +134,13 @@ hr {
 }
 
 /* HERO SECTION */
-.computer-img {
+.tab-1-img,
+.tab-2-img,
+.tab-3-img {
   width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 96%;
 }
 
 .hero-section {
@@ -299,6 +300,9 @@ hr {
 .faq-question-4 {
   font-weight: 500;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
 }
 
 .collapse-faq-answer {
@@ -306,7 +310,8 @@ hr {
 }
 
 .arrow {
-  /* background-image: url(./images/icon-arrow.svg); UNSURE HOW TO GET TO APPEAR */
+  width: 30px;
+  height: fit-content;
 }
 
 /* add this class when click faq questions */
@@ -389,6 +394,11 @@ footer button {
 
 @media screen and (min-width: 1440px) {
   /* nav bars & buttons */
+  .bookmark-logo {
+    width: 20%;
+    margin-left: 8em;
+  }
+
   .nav-bar-mobile {
     display: none;
   }
@@ -413,6 +423,7 @@ footer button {
     text-transform: uppercase;
     font-size: larger;
     border: none;
+    cursor: pointer;
   }
 
   .desktop-nav-login {
@@ -424,6 +435,7 @@ footer button {
     border: solid red;
     border-radius: 7px;
     padding: 13px 35px;
+    cursor: pointer;
   }
 
   /* hero section */
@@ -451,6 +463,7 @@ footer button {
   .hero-section button {
     margin: 25px 0px;
     font-size: larger;
+    cursor: pointer;
   }
 
   /* features section */
@@ -470,13 +483,31 @@ footer button {
 
   .features-section button {
     flex-direction: row;
+    cursor: pointer;
+    font-size: larger;
   }
 
   .bookmark-section img {
-    width: 70%;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 30px;
+  }
+
+  .bookmark-section p {
+    margin: 0;
+    line-height: 40px;
+    font-size: x-large;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: xxx-large;
+  }
+
+  .more-info-button {
+    font-size: larger;
   }
 
   #simple-bookmarking-container,
@@ -490,17 +521,62 @@ footer button {
     align-self: center;
     text-align: left;
   }
+
   #speedy-searching-container div {
     align-self: center;
     text-align: left;
+    padding: 0px 10%;
   }
-  #easy-sharing-container {
+  #easy-sharing-container div {
     align-self: center;
     text-align: left;
+    padding: 0px 10%;
+  }
+
+  /* download extensions section */
+  .download-extension-section p {
+    margin: 0;
+    line-height: 40px;
+    font-size: x-large;
+    padding: 0px 315px;
   }
 
   /* extension options */
   .extension-options {
+    display: flex;
+    margin: 50px 50px;
+  }
+
+  .minimum-version {
+    font-size: 25px;
+    margin-bottom: inherit;
+  }
+
+  .extension-firefox {
+    position: relative;
+    top: 100px;
+  }
+
+  .extension-opera {
+    position: relative;
+    top: 200px;
+  }
+
+  .install-extension-btn {
+    font-size: larger;
+  }
+
+  /* faq section */
+  .faq {
+    margin: 30px 340px;
+  }
+  .faq-section {
+    margin: 300px 0px 100px 0px;
+  }
+
+  .faq-section p {
+    font-size: x-large;
+    line-height: 45px;
   }
 
   /* footer section */
