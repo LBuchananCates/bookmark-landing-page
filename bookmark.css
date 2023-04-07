@@ -180,6 +180,11 @@ hr {
   flex-direction: column;
 }
 
+.features-section-tabs {
+  align-self: center;
+  text-align: -webkit-center;
+}
+
 .features-section p {
   color: hsl(229, 8%, 60%);
   margin: 15px;
@@ -312,11 +317,13 @@ hr {
 .arrow {
   width: 30px;
   height: fit-content;
+  transition: ease 0.5s;
 }
 
 /* add this class when click faq questions */
 .open-arrow {
   transform: rotate(180deg);
+  transition: ease 0.5s;
 }
 
 /* stay up to date with us footer */
@@ -332,7 +339,7 @@ hr {
 input {
   font-family: "Rubik", sans-serif;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 15px;
   margin: 20px;
 }
@@ -340,7 +347,6 @@ input {
 /* error message for email verification */
 .error-message {
   /* background-color: red; cancelling out red background color due to priority styles on uptodate section */
-  color: white;
 }
 
 .contact-us-btn {
@@ -348,7 +354,7 @@ input {
   color: white;
   border: solid red;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 15px;
   margin: 20px;
 }
@@ -364,11 +370,6 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-}
-
-footer img {
-  width: 10%;
-  height: 10%;
 }
 
 .footer-bookmark-logo {
@@ -469,6 +470,13 @@ footer button {
   /* features section */
   .features-title {
     font-size: xxx-large;
+  }
+
+  .features-section-tabs {
+    display: flex;
+    font-size: larger;
+    border-bottom: solid 5px red;
+    padding-bottom: 55px;
   }
 
   .features-section p {
@@ -579,9 +587,67 @@ footer button {
     line-height: 45px;
   }
 
+  .faq div {
+    font-size: x-large;
+  }
+
+  /* stay up to date with us section */
+  .stay-uptodate-with-us-section small {
+    font-size: medium;
+    text-transform: uppercase;
+    margin-top: 60px;
+    letter-spacing: 8px;
+  }
+
+  .stay-uptodate-with-us-section p {
+    font-size: 40px;
+    padding: 5px 360px;
+  }
+
+  .stay-uptodate-with-us-section input {
+    width: 65%;
+    align-self: center;
+    height: 6.5vh;
+    font-size: x-large;
+  }
+
+  .stay-uptodate-with-us-section input::placeholder {
+    font-size: 20px;
+  }
+
+  /* div containing input field and submit button */
+  .stay-uptodate-with-us-section div {
+    display: flex;
+    align-self: center;
+    width: 60%;
+    justify-content: space-evenly;
+  }
+
+  .contact-us-btn {
+    font-size: larger;
+    padding: 15px 30px;
+  }
+
   /* footer section */
   footer {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .footer-logo-and-buttons {
+    display: flex;
+  }
+
+  .footer-bookmark-logo {
+    height: 3vw;
+  }
+
+  .footer-buttons {
+    display: flex;
+    align-self: center;
+  }
+
+  .footer-social-media-buttons {
+    align-self: center;
   }
 }
