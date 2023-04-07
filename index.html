@@ -79,7 +79,7 @@
       <img
         src="./images/illustration-hero.svg"
         alt="computer-illustration"
-        class="computer-img"
+        class="tab-1-img"
       />
       <div>
         <h1 class="title">A Simple Bookmark Manager</h1>
@@ -99,17 +99,17 @@
         websites. Your bookmarks sync between your devices so you can access
         them on the go.
       </p>
-      <hr />
-      <button class="simple-bookmarking" id="simple-bookmarking">
-        Simple Bookmarking
-      </button>
-      <hr />
-      <button class="speedy-searching" id="speedy-searching">
-        Speedy Searching
-      </button>
-      <hr />
-      <button class="easy-sharing" id="easy-sharing">Easy Sharing</button>
-      <hr />
+      <div class="features-section-tabs">
+        <button class="simple-bookmarking" id="simple-bookmarking">
+          Simple Bookmarking
+        </button>
+
+        <button class="speedy-searching" id="speedy-searching">
+          Speedy Searching
+        </button>
+
+        <button class="easy-sharing" id="easy-sharing">Easy Sharing</button>
+      </div>
     </div>
 
     <div class="bookmark-section">
@@ -277,27 +277,31 @@
     <div class="stay-uptodate-with-us-section">
       <small>35,000+ already joined</small>
       <p>Stay up-to-date with what we’re doing.</p>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Enter your email address"
-        onclick="validation()"
-      />
-      <div id="error-message">Whoops, make sure it's an email</div>
-      <button class="contact-us-btn">Contact Us</button>
+      <div>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email address"
+          onclick="validation()"
+        />
+        <!-- <div id="error-message">Whoops, make sure it's an email</div> -->
+        <button class="contact-us-btn">Contact Us</button>
+      </div>
     </div>
 
     <footer>
-      <img
-        src="./images/logo-bookmark.svg"
-        alt="bookmark-logo"
-        class="footer-bookmark-logo"
-      />
-      <div class="footer-buttons">
-        <button class="bottom-nav-features">Features</button>
-        <button class="bottom-nav-pricing">Pricing</button>
-        <button class="bottom-nav-contact">Contact</button>
+      <div class="footer-logo-and-buttons">
+        <img
+          src="./images/logo-bookmark.svg"
+          alt="bookmark-logo"
+          class="footer-bookmark-logo"
+        />
+        <div class="footer-buttons">
+          <button class="bottom-nav-features">Features</button>
+          <button class="bottom-nav-pricing">Pricing</button>
+          <button class="bottom-nav-contact">Contact</button>
+        </div>
       </div>
 
       <div class="footer-social-media-buttons">
