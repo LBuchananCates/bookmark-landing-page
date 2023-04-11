@@ -210,6 +210,12 @@ hr {
   margin: 60px 0px;
 }
 
+.simple-bookmarking-title,
+.speedy-searching-title,
+.easy-sharing-title {
+  margin-top: 75px;
+}
+
 /* hidden class for features */
 .hidden {
   display: none;
@@ -225,11 +231,11 @@ hr {
 .tab-1-img,
 .tab-2-img,
 .tab-3-img {
+  /* position: relative; if turned on, img appears on top of mobie side menu */
   width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 96%;
 }
 
 /* more info button */
@@ -307,7 +313,6 @@ hr {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  font-size: x-large;
 }
 
 .collapse-faq-answer {
@@ -334,6 +339,11 @@ hr {
   display: flex;
   flex-direction: column;
   padding: 20px;
+}
+
+.stay-uptodate-with-us-section div {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -387,6 +397,11 @@ footer button {
   letter-spacing: 2px;
   margin: 15px;
   border: none;
+}
+
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-social-media-buttons img {
@@ -496,7 +511,7 @@ footer button {
   }
 
   .bookmark-section img {
-    width: 100%;
+    width: 40%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -516,26 +531,30 @@ footer button {
 
   .more-info-button {
     font-size: larger;
+    height: 67px;
+    width: 180px;
   }
 
-  #simple-bookmarking-container,
-  #speedy-searching-container,
-  #easy-sharing-container {
+  /* fix this display isn't right */
+  .simple-bookmarking-container,
+  .speedy-searching-container,
+  .easy-sharing-container {
     display: flex;
     flex-direction: row;
   }
 
-  #simple-bookmarking-container div {
+  .simple-bookmarking-container div {
     align-self: center;
     text-align: left;
+    padding: 0px 8%;
   }
 
-  #speedy-searching-container div {
+  .speedy-searching-container div {
     align-self: center;
     text-align: left;
     padding: 0px 10%;
   }
-  #easy-sharing-container div {
+  .easy-sharing-container div {
     align-self: center;
     text-align: left;
     padding: 0px 10%;
@@ -591,6 +610,17 @@ footer button {
     font-size: x-large;
   }
 
+  .faq-question-1,
+  .faq-question-2,
+  .faq-question-3,
+  .faq-question-4 {
+    font-size: x-large;
+  }
+
+  .faq button {
+    /* ???? */
+  }
+
   /* stay up to date with us section */
   .stay-uptodate-with-us-section small {
     font-size: medium;
@@ -618,6 +648,7 @@ footer button {
   /* div containing input field and submit button */
   .stay-uptodate-with-us-section div {
     display: flex;
+    flex-direction: row;
     align-self: center;
     width: 60%;
     justify-content: space-evenly;
@@ -644,6 +675,7 @@ footer button {
 
   .footer-buttons {
     display: flex;
+    flex-direction: row;
     align-self: center;
   }
 
