@@ -145,7 +145,12 @@ hr {
 
 .hero-section {
   text-align: center;
-  margin: 60px 0px;
+  margin: 50px 0px;
+}
+
+.hero-section h1 {
+  margin: 15px 5px;
+  font-size: 1.5em;
 }
 
 .hero-section p {
@@ -198,10 +203,12 @@ hr {
   border: none;
   align-self: center;
   margin: 5px 0px;
+  border-bottom: gray solid 1px;
 }
 
 .features-section button:focus {
-  text-decoration: underline 2px solid red;
+  color: black;
+  border-bottom: solid 3px red;
 }
 
 /* BOOKMARK SECTION */
@@ -320,7 +327,7 @@ hr {
 }
 
 .arrow {
-  width: 30px;
+  width: 15px;
   height: fit-content;
   transition: ease 0.5s;
 }
@@ -473,11 +480,11 @@ footer button {
   .hero-section p {
     margin: 0;
     line-height: 40px;
-    font-size: x-large;
+    font-size: 27px;
   }
 
   .hero-section button {
-    margin: 25px 0px;
+    margin: 25px 30px 0px 0px;
     font-size: larger;
     cursor: pointer;
   }
@@ -490,13 +497,12 @@ footer button {
   .features-section-tabs {
     display: flex;
     font-size: larger;
-    border-bottom: solid 1px gray;
-    padding: 55px;
+    /* border-bottom: solid 1px gray; */
   }
 
   .features-section p {
     margin: 25px 350px;
-    font-size: x-large;
+    font-size: 27px;
     line-height: 40px;
   }
 
@@ -505,17 +511,10 @@ footer button {
   }
 
   .features-section button {
-    color: hsl(229, 8%, 60%);
     flex-direction: row;
     cursor: pointer;
     font-size: larger;
     margin: 0px 30px;
-  }
-
-  .features-section button:focus {
-    color: black;
-    /* black text instead of gray
-    red underline */
   }
 
   .bookmark-section {
@@ -533,7 +532,7 @@ footer button {
   .bookmark-section p {
     margin: 0;
     line-height: 40px;
-    font-size: x-large;
+    font-size: 27px;
     margin-bottom: 30px;
   }
 
@@ -573,7 +572,7 @@ footer button {
   .download-extension-section p {
     margin: 0;
     line-height: 40px;
-    font-size: x-large;
+    font-size: 27px;
     padding: 0px 315px;
   }
 
@@ -612,11 +611,11 @@ footer button {
 
   .faq-section section {
     padding: 0px 366px;
-    font-size: x-large;
+    font-size: 27px;
   }
 
   .faq-section p {
-    font-size: x-large;
+    font-size: 27px;
     line-height: 45px;
   }
 
@@ -633,7 +632,7 @@ footer button {
 
   /* stay up to date with us section */
   .stay-uptodate-with-us-section small {
-    font-size: medium;
+    font-size: 20px;
     text-transform: uppercase;
     margin-top: 60px;
     letter-spacing: 8px;
@@ -661,6 +660,11 @@ footer button {
     align-self: center;
     width: 60%;
     justify-content: space-evenly;
+  }
+
+  /* add class if email rules no match */
+  .invalid {
+    background-color: red;
   }
 
   .contact-us-btn {
