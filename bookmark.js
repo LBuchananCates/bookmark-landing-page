@@ -61,7 +61,7 @@ const faqQuestion2 = document.querySelector(".faq-question-2");
 const faqAnswer2 = document.querySelector(".faq-answer-2");
 faqQuestion2.addEventListener("click", function () {
   faqAnswer2.classList.toggle("collapse-faq-answer");
-  // openArrow.classList.toggle("open-arrow");
+  openArrow.classList.toggle("open-arrow");
 });
 
 const faqQuestion3 = document.querySelector(".faq-question-3");
@@ -82,21 +82,18 @@ faqQuestion4.addEventListener("click", function () {
 // grab email and error message by id
 const email = document.getElementById("email");
 const emailErrorMessage = document.getElementById("error-message");
+const contactUsButton = document.querySelector(".contact-us-btn");
 
-// use regex for email
+// if email doesn't fit pattern, show error border
 let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 function validation() {
   if (email.value.match(pattern)) {
     email.classList.add("valid");
     email.classList.remove("invalid");
-    // style valid and invalid classes in CSS
     emailErrorMessage.style.visibility = "hidden";
   } else {
     email.classList.remove("valid");
     email.classList.add("invalid");
-    emailErrorMessage.textContent = "Whoops, make sure it's an email";
   }
 }
-// show error border if email entered incorrectly: style in CSS
-// remove error border and error messages when email format is correct
-// reference signup-form.js
+contactUsButton.addEventListener("click", validation);
