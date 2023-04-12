@@ -81,7 +81,7 @@ faqQuestion4.addEventListener("click", function () {
 // EMAIL VERIFICATION
 // grab email and error message by id
 const email = document.getElementById("email");
-const emailErrorMessage = document.getElementById("error-message");
+const emailErrorMessage = document.querySelector(".error-message");
 const contactUsButton = document.querySelector(".contact-us-btn");
 
 // if email doesn't fit pattern, show error border
@@ -90,7 +90,7 @@ function validation() {
   if (email.value.match(pattern)) {
     email.classList.add("valid");
     email.classList.remove("invalid");
-    emailErrorMessage.style.visibility = "hidden";
+    emailErrorMessage.style.display = "none";
   } else {
     email.classList.remove("valid");
     email.classList.add("invalid");
