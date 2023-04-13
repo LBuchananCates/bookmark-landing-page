@@ -13,7 +13,7 @@ closeMobileMenuButton.addEventListener("click", function () {
   mobileMenu.classList.add("close-menu");
 });
 
-// FEATURES WITH BUTTONS (3 TABS) needs fixing
+// FEATURES WITH BUTTONS (3 TABS)
 const simpleBookmarkingButton = document.getElementById("simple-bookmarking");
 const simpleBookmarkingContainer = document.querySelector(
   ".simple-bookmarking-container"
@@ -47,51 +47,33 @@ easySharingButton.addEventListener("click", function () {
 });
 
 // FAQ SECTION TOGGLES
-const faqQuestion1 = document.querySelector(".faq-question-1");
-const faqAnswer1 = document.querySelector(".faq-answer-1");
-const openArrow = document.getElementById("arrow");
+const faqQuestions = document.querySelectorAll(".faq-question");
 
-faqQuestion1.addEventListener("click", function () {
-  faqAnswer1.classList.toggle("collapse-faq-answer");
-  openArrow.classList.toggle("open-arrow");
-  // works here
-});
+for (const faqQuestion of faqQuestions) {
+  const faqAnswer = faqQuestion.querySelector(".faq-answer");
+  const openArrow = faqQuestion.querySelector(".arrow");
 
-const faqQuestion2 = document.querySelector(".faq-question-2");
-const faqAnswer2 = document.querySelector(".faq-answer-2");
-faqQuestion2.addEventListener("click", function () {
-  faqAnswer2.classList.toggle("collapse-faq-answer");
-  openArrow.classList.toggle("open-arrow");
-});
-
-const faqQuestion3 = document.querySelector(".faq-question-3");
-const faqAnswer3 = document.querySelector(".faq-answer-3");
-faqQuestion3.addEventListener("click", function () {
-  faqAnswer3.classList.toggle("collapse-faq-answer");
-  // openArrow.classList.toggle("open-arrow");
-});
-
-const faqQuestion4 = document.querySelector(".faq-question-4");
-const faqAnswer4 = document.querySelector(".faq-answer-4");
-faqQuestion4.addEventListener("click", function () {
-  faqAnswer4.classList.toggle("collapse-faq-answer");
-  // openArrow.classList.toggle("open-arrow");
-});
+  faqQuestion.addEventListener("click", function () {
+    faqAnswer.classList.toggle("collapse-faq-answer");
+    openArrow.classList.toggle("open-arrow");
+  });
+}
 
 // EMAIL VERIFICATION
 const email = document.getElementById("email");
+const errorMsg = document.querySelector(".error-message");
 const contactUsButton = document.querySelector(".contact-us-btn");
 
-// if email doesn't fit pattern, show error border
 let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 function validation() {
   if (email.value.match(pattern)) {
     email.classList.add("valid");
     email.classList.remove("invalid");
+    errorMsg.style.display = "none";
   } else {
     email.classList.remove("valid");
     email.classList.add("invalid");
-    alert("Whoops, looks like this isn't an email");
+    errorMsg.style.display = "flex";
   }
 }
 contactUsButton.addEventListener("click", validation);

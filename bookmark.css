@@ -202,7 +202,7 @@ hr {
   background-color: white;
   border: none;
   align-self: center;
-  margin: 5px 0px;
+  margin: 15px 40px;
   border-bottom: gray solid 1px;
 }
 
@@ -312,19 +312,26 @@ hr {
   padding: 15px;
 }
 
-.faq p {
+.faq-answer {
   color: gray;
-  margin: 0px 20px;
+  margin: 0px;
   line-height: 25px;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
-.faq-question-1,
-.faq-question-2,
-.faq-question-3,
-.faq-question-4 {
-  font-weight: 500;
-  padding: 20px;
+.faq-question {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 500;
+  margin: 10px 20px;
+  border-bottom: gray solid 1px;
+}
+
+.question-and-arrow {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -336,6 +343,7 @@ hr {
   width: 15px;
   height: fit-content;
   transition: ease 0.5s;
+  align-self: center;
 }
 
 /* add this class when click faq questions */
@@ -365,21 +373,26 @@ input {
   border-radius: 5px;
   padding: 15px;
   margin: 20px;
-  z-index: 1;
 }
 
-/* error message for email verification */
+/* add class if email rules no match */
+.valid {
+  border: none;
+}
+
+.invalid {
+  border: solid 2px red;
+}
 
 .error-message {
+  display: none;
   font-style: italic;
   background-color: red;
   text-align: left;
   border-radius: 7px;
   font-size: small;
-  padding: 60px 10px 10px;
-  margin: -20px 15px 5px;
-  position: relative;
-  top: -51px;
+  padding: 10px 10px 10px;
+  margin: -20px 20px 5px;
 }
 
 .contact-us-btn {
@@ -643,10 +656,7 @@ footer button {
     font-size: x-large;
   }
 
-  .faq-question-1,
-  .faq-question-2,
-  .faq-question-3,
-  .faq-question-4 {
+  .faq-question {
     font-size: x-large;
   }
 
@@ -689,11 +699,6 @@ footer button {
     align-self: center;
     width: 60%;
     justify-content: space-evenly;
-  }
-
-  /* add class if email rules no match */
-  .invalid {
-    border: solid 2px red;
   }
 
   .contact-us-btn {
