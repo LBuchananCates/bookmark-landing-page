@@ -301,7 +301,7 @@ hr {
   margin: 60px 0px;
 }
 
-.faq-section p {
+.faq-section section {
   color: hsl(229, 8%, 60%);
   padding: 0px 20px;
   line-height: 27px;
@@ -310,6 +310,12 @@ hr {
 .faq {
   text-align: left;
   padding: 15px;
+}
+
+.faq p {
+  color: gray;
+  margin: 0px 20px;
+  line-height: 25px;
 }
 
 .faq-question-1,
@@ -356,14 +362,24 @@ hr {
 input {
   font-family: "Rubik", sans-serif;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 15px;
   margin: 20px;
+  z-index: 1;
 }
 
 /* error message for email verification */
+
 .error-message {
-  /* background-color: red; cancelling out red background color due to priority styles on uptodate section */
+  font-style: italic;
+  background-color: red;
+  text-align: left;
+  border-radius: 7px;
+  font-size: small;
+  padding: 60px 10px 10px;
+  margin: -20px 15px 5px;
+  position: relative;
+  top: -51px;
 }
 
 .contact-us-btn {
@@ -522,7 +538,7 @@ footer button {
   }
 
   .bookmark-section img {
-    width: 40%;
+    width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -537,13 +553,14 @@ footer button {
   }
 
   h2 {
-    font-size: xxx-large;
+    font-size: 35px;
   }
 
   .more-info-button {
     font-size: larger;
     height: 67px;
     width: 180px;
+    cursor: pointer;
   }
 
   /* fix this display isn't right */
@@ -579,6 +596,7 @@ footer button {
   .extension-options {
     display: flex;
     margin: 50px 50px;
+    justify-content: center;
   }
 
   .minimum-version {
@@ -598,6 +616,7 @@ footer button {
 
   .install-extension-btn {
     font-size: larger;
+    cursor: pointer;
   }
 
   /* faq section */
@@ -606,17 +625,18 @@ footer button {
   }
 
   .faq-section {
-    margin: 450px 0px 100px 0px;
+    margin: 450px 70px 100px 70px;
   }
 
   .faq-section section {
     padding: 0px 366px;
     font-size: 27px;
+    line-height: 40px;
   }
 
   .faq-section p {
-    font-size: 27px;
-    line-height: 45px;
+    font-size: 18px;
+    line-height: 35px;
   }
 
   .faq div {
@@ -628,6 +648,10 @@ footer button {
   .faq-question-3,
   .faq-question-4 {
     font-size: x-large;
+  }
+
+  .arrow {
+    cursor: pointer;
   }
 
   /* stay up to date with us section */
@@ -643,10 +667,15 @@ footer button {
     padding: 5px 360px;
   }
 
+  .contact-us-section {
+    display: flex;
+    flex-direction: row;
+  }
+
   .stay-uptodate-with-us-section input {
     width: 65%;
     align-self: center;
-    height: 6.5vh;
+    height: 5.5vh;
     font-size: x-large;
   }
 
@@ -664,12 +693,13 @@ footer button {
 
   /* add class if email rules no match */
   .invalid {
-    background-color: red;
+    border: solid 2px red;
   }
 
   .contact-us-btn {
     font-size: larger;
     padding: 15px 30px;
+    cursor: pointer;
   }
 
   /* footer section */
