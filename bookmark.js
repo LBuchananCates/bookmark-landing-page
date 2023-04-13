@@ -1,6 +1,6 @@
 // MOBILE MENU FUNCTIONALITY DONE
-const openMobileMenuButton = document.getElementById("hamburger-menu-icon");
-const closeMobileMenuButton = document.getElementById("icon-close");
+const openMobileMenuButton = document.querySelector(".hamburger-menu-icon");
+const closeMobileMenuButton = document.querySelector(".icon-close");
 const mobileMenu = document.querySelector(".mobile-menu");
 
 openMobileMenuButton.addEventListener("click", function () {
@@ -14,15 +14,15 @@ closeMobileMenuButton.addEventListener("click", function () {
 });
 
 // FEATURES WITH BUTTONS (3 TABS)
-const simpleBookmarkingButton = document.getElementById("simple-bookmarking");
+const simpleBookmarkingButton = document.querySelector(".simple-bookmarking");
 const simpleBookmarkingContainer = document.querySelector(
   ".simple-bookmarking-container"
 );
-const speedySearchingButton = document.getElementById("speedy-searching");
+const speedySearchingButton = document.querySelector(".speedy-searching");
 const speedySearchingContainer = document.querySelector(
   ".speedy-searching-container"
 );
-const easySharingButton = document.getElementById("easy-sharing");
+const easySharingButton = document.querySelector(".easy-sharing");
 const easySharingContainer = document.querySelector(".easy-sharing-container");
 
 // displays "bookmark in one click" paragraph WORKS but when refresh, all 3 display
@@ -60,7 +60,7 @@ for (const faqQuestion of faqQuestions) {
 }
 
 // EMAIL VERIFICATION
-const email = document.getElementById("email");
+const email = document.querySelector(".email");
 const errorMsg = document.querySelector(".error-message");
 const contactUsButton = document.querySelector(".contact-us-btn");
 
