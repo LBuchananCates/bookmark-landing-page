@@ -73,7 +73,7 @@ function validation() {
   } else {
     email.classList.remove("valid");
     email.classList.add("invalid");
-    errorMsg.style.display = "flex";
+    alert("Whoops, looks like this isn't an email");
   }
 }
 contactUsButton.addEventListener("click", validation);

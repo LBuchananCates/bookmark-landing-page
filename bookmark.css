@@ -185,18 +185,20 @@ hr {
   flex-direction: column;
 }
 
-.features-section-tabs {
-  align-self: center;
-  text-align: -webkit-center;
-}
-
 .features-section p {
   color: hsl(229, 8%, 60%);
   margin: 15px;
   line-height: 27px;
 }
 
-.features-section button {
+.features-section-tabs {
+  align-self: center;
+  text-align: -webkit-center;
+}
+
+.simple-bookmarking,
+.speedy-searching,
+.easy-sharing {
   display: flex;
   color: hsl(229, 31%, 21%);
   background-color: white;
@@ -695,10 +697,13 @@ footer button {
 
   .stay-uptodate-with-us-section div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-self: center;
-    width: 60%;
     justify-content: space-evenly;
+  }
+
+  input.email {
+    width: 150%;
   }
 
   .contact-us-btn {
