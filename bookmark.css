@@ -99,24 +99,9 @@ hr {
   width: 80vw;
 }
 
-.top-nav-features {
-  color: white;
-  background-color: hsl(229, 31%, 21%, 0);
-  border: none;
-}
-
-.top-nav-pricing {
-  color: white;
-  background-color: hsl(229, 31%, 21%, 0);
-  border: none;
-}
-
-.top-nav-contact {
-  color: white;
-  background-color: hsl(229, 31%, 21%, 0);
-  border: none;
-}
-
+.top-nav-features,
+.top-nav-pricing,
+.top-nav-contact,
 .top-nav-login {
   color: white;
   background-color: hsl(229, 31%, 21%, 0);
@@ -378,8 +363,8 @@ input {
   border: solid 2px red;
 }
 
-.error-message {
-  display: none;
+.email__error-message {
+  display: flex;
   font-style: italic;
   background-color: red;
   text-align: left;
@@ -412,14 +397,14 @@ footer {
   flex-direction: column;
 }
 
-.footer-bookmark-logo {
+.footer__bookmark-logo {
   filter: invert(100%);
   width: 35%;
   margin: 25px;
   align-self: center;
 }
 
-footer button {
+.footer__button {
   background-color: hsl(229, 31%, 21%, 0);
   color: white;
   font-size: initial;
@@ -429,12 +414,12 @@ footer button {
   border: none;
 }
 
-.footer-buttons {
+.footer__button-container {
   display: flex;
   flex-direction: column;
 }
 
-.footer-social-media-buttons img {
+.footer__social-media-buttons img {
   margin: 30px 25px;
 }
 
@@ -675,29 +660,26 @@ footer button {
 
   .stay-uptodate-with-us-section__contact-us-div {
     display: flex;
-    flex-direction: row;
-  }
-
-  .stay-uptodate-with-us-section input {
-    width: 65%;
-    align-self: center;
-    height: 5.5vh;
-    font-size: x-large;
-  }
-
-  .stay-uptodate-with-us-section input::placeholder {
-    font-size: 20px;
-  }
-
-  .stay-uptodate-with-us-section div {
-    display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: space-evenly;
   }
 
-  input.email {
+  .stay-uptodate-with-us-section__input__email::placeholder {
+    font-size: 20px;
+  }
+
+  .stay-uptodate-with-us-section__input__email {
     width: 150%;
+    align-self: center;
+    height: 5.5vh;
+    font-size: x-large;
+  }
+
+  .email__error-message {
+    display: none;
+    width: 150%;
+    align-self: center;
   }
 
   .contact-us-btn {
@@ -712,21 +694,21 @@ footer button {
     justify-content: space-around;
   }
 
-  .footer-logo-and-buttons {
+  .footer__logo-and-buttons-container {
     display: flex;
   }
 
-  .footer-bookmark-logo {
+  .footer__bookmark-logo {
     height: 3vw;
   }
 
-  .footer-buttons {
+  .footer__button-container {
     display: flex;
     flex-direction: row;
     align-self: center;
   }
 
-  .footer-social-media-buttons {
+  .footer__social-media-buttons {
     align-self: center;
   }
 }
