@@ -60,8 +60,10 @@ for (const faqQuestion of faqQuestions) {
 }
 
 // EMAIL VERIFICATION
-const email = document.querySelector(".email");
-const errorMsg = document.querySelector(".error-message");
+const email = document.querySelector(
+  ".stay-uptodate-with-us-section__input__email"
+);
+const errorMsg = document.querySelector(".email__error-message");
 const contactUsButton = document.querySelector(".contact-us-btn");
 
 let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -73,7 +75,7 @@ function validation() {
   } else {
     email.classList.remove("valid");
     email.classList.add("invalid");
-    alert("Whoops, looks like this isn't an email");
+    errorMsg.style.display = "flex";
   }
 }
 contactUsButton.addEventListener("click", validation);
