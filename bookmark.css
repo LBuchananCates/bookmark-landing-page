@@ -364,7 +364,7 @@ input {
 }
 
 .email__error-message {
-  display: flex;
+  display: none;
   font-style: italic;
   background-color: red;
   text-align: left;

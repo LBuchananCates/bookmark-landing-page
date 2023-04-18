@@ -44,13 +44,13 @@
         </div>
 
         <hr />
-        <button class="top-nav-features">Features</button>
+        <button class="top-nav-features" id="features">Features</button>
         <hr />
-        <button class="top-nav-pricing">Pricing</button>
+        <button class="top-nav-pricing" id="pricing">Pricing</button>
         <hr />
-        <button class="top-nav-contact">Contact</button>
+        <button class="top-nav-contact" id="contact">Contact</button>
         <hr />
-        <button class="top-nav-login">Login</button>
+        <button class="top-nav-login" id="login">Login</button>
 
         <div class="nav-social-media-buttons">
           <img src="./images/icon-facebook.svg" alt="facebook-icon" />
@@ -91,7 +91,7 @@
     </div>
     <!-- done BEM -->
 
-    <div class="features-section">
+    <div class="features-section" id="features">
       <h2 class="features-section__title">Features</h2>
       <p class="features-section__description">
         Our aim is to make it quick and easy for you to access your favourite
@@ -283,10 +283,12 @@
         <input
           type="email"
           name="email"
-          class="email"
+          class="stay-uptodate-with-us-section__input__email"
           placeholder="Enter your email address"
         />
-        <p class="error-message">Whoops, looks like this isn't an email</p>
+        <p class="email__error-message">
+          Whoops, looks like this isn't an email
+        </p>
 
         <button class="contact-us-btn" onclick="validation()">
           Contact Us
@@ -295,20 +297,20 @@
     </div>
 
     <footer>
-      <div class="footer-logo-and-buttons">
+      <div class="footer__logo-and-buttons-container">
         <img
           src="./images/logo-bookmark.svg"
           alt="bookmark-logo"
-          class="footer-bookmark-logo"
+          class="footer__bookmark-logo"
         />
-        <div class="footer-buttons">
-          <button class="bottom-nav-features">Features</button>
-          <button class="bottom-nav-pricing">Pricing</button>
-          <button class="bottom-nav-contact">Contact</button>
+        <div class="footer__button-container">
+          <button class="footer__button">Features</button>
+          <button class="footer__button">Pricing</button>
+          <button class="footer__button">Contact</button>
         </div>
       </div>
 
-      <div class="footer-social-media-buttons">
+      <div class="footer__social-media-buttons">
         <img
           src="./images/icon-facebook.svg"
           alt="facebook-icon"
