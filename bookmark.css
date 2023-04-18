@@ -134,9 +134,7 @@ hr {
 }
 
 /* HERO SECTION */
-.tab-1-img,
-.tab-2-img,
-.tab-3-img {
+.hero-section__img {
   width: 70%;
   display: block;
   margin-left: auto;
@@ -148,18 +146,18 @@ hr {
   margin: 50px 0px;
 }
 
-.hero-section h1 {
+.hero-section__title {
   margin: 15px 5px;
   font-size: 1.5em;
 }
 
-.hero-section p {
+.hero-section__description {
   color: hsl(229, 8%, 60%);
   margin: 15px;
   line-height: 27px;
 }
 
-.hero-section button {
+.hero-section__button {
   font-family: "Rubik";
   font-weight: 500;
   background-color: #fcfcfc;
@@ -171,7 +169,7 @@ hr {
   margin: 0px 10px;
 }
 
-.hero-section button:hover {
+.hero-section__button:hover {
   background-color: hsl(231, 69%, 60%);
   color: white;
   border: solid hsl(231, 69%, 60%);
@@ -185,20 +183,18 @@ hr {
   flex-direction: column;
 }
 
-.features-section p {
+.features-section__description {
   color: hsl(229, 8%, 60%);
   margin: 15px;
   line-height: 27px;
 }
 
-.features-section-tabs {
+.features-section__tabs {
   align-self: center;
   text-align: -webkit-center;
 }
 
-.simple-bookmarking,
-.speedy-searching,
-.easy-sharing {
+.features-section__button {
   display: flex;
   color: hsl(229, 31%, 21%);
   background-color: white;
@@ -208,7 +204,7 @@ hr {
   border-bottom: gray solid 1px;
 }
 
-.features-section button:focus {
+.features-section__button:focus {
   color: black;
   border-bottom: solid 3px red;
 }
@@ -219,9 +215,7 @@ hr {
   margin: 60px 0px;
 }
 
-.simple-bookmarking-title,
-.speedy-searching-title,
-.easy-sharing-title {
+.bookmark-section__title {
   margin-top: 75px;
 }
 
@@ -230,17 +224,13 @@ hr {
   display: none;
 }
 
-.bookmark-section p {
+.bookmark-section__description {
   color: hsl(229, 8%, 60%);
   margin: 15px;
   line-height: 27px;
 }
 
-/* images for 3 diff features of bookmark section */
-.tab-1-img,
-.tab-2-img,
-.tab-3-img {
-  /* position: relative; if turned on, img appears on top of mobie side menu */
+.bookmark-section__img {
   width: 70%;
   display: block;
   margin-left: auto;
@@ -263,22 +253,24 @@ hr {
   margin: 60px 0px;
 }
 
-.download-extension-section p {
+.download-extension-section__title {
+  font-size: 1.5em;
+}
+
+.download-extension-section__description {
   color: hsl(229, 8%, 60%);
   margin: 15px;
   line-height: 27px;
 }
 
-.extension-options .extension-chrome,
-.extension-firefox,
-.extension-opera {
+.download-extension-section__extension {
   background-color: white;
   box-shadow: 0px 5px 5px hsl(229deg 8% 60% / 27%);
   border-radius: 10px;
   margin: 45px 30px;
 }
 
-.minimum-version {
+.download-extension-section__minimum-version-div {
   color: hsl(229, 8%, 60%);
 }
 
@@ -287,7 +279,7 @@ hr {
   width: -webkit-fill-available;
 }
 
-.install-extension-btn {
+.download-extension-section__install-btn {
   background-color: hsl(231, 69%, 60%);
   color: white;
   border: solid hsl(231, 69%, 60%);
@@ -303,18 +295,18 @@ hr {
   margin: 60px 0px;
 }
 
-.faq-section section {
+.faq-section__description {
   color: hsl(229, 8%, 60%);
   padding: 0px 20px;
   line-height: 27px;
 }
 
-.faq {
+.faq-section__faq {
   text-align: left;
   padding: 15px;
 }
 
-.faq-answer {
+.faq-section__answer {
   color: gray;
   margin: 0px;
   line-height: 25px;
@@ -322,7 +314,7 @@ hr {
   margin-bottom: 20px;
 }
 
-.faq-question {
+.faq-section__question {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -364,7 +356,7 @@ hr {
   padding: 20px;
 }
 
-.stay-uptodate-with-us-section div {
+.stay-uptodate-with-us-section__contact-us-div {
   display: flex;
   flex-direction: column;
 }
@@ -504,34 +496,34 @@ footer button {
     padding: 0px 145px;
   }
 
-  .hero-section div .title {
+  .hero-section__title {
     font-size: xxx-large;
   }
 
-  .hero-section p {
+  .hero-section__description {
     margin: 0;
     line-height: 40px;
     font-size: 27px;
   }
 
-  .hero-section button {
+  .hero-section__button {
     margin: 25px 30px 0px 0px;
     font-size: larger;
     cursor: pointer;
   }
 
   /* features section */
-  .features-title {
+  .features-section__title {
     font-size: xxx-large;
   }
 
-  .features-section-tabs {
+  .features-section__tabs {
     display: flex;
     font-size: larger;
     /* border-bottom: solid 1px gray; */
   }
 
-  .features-section p {
+  .features-section__description {
     margin: 25px 350px;
     font-size: 27px;
     line-height: 40px;
@@ -541,18 +533,19 @@ footer button {
     display: none;
   }
 
-  .features-section button {
+  .features-section__button {
     flex-direction: row;
     cursor: pointer;
     font-size: larger;
     margin: 0px 30px;
   }
 
+  /* bookmark section */
   .bookmark-section {
     margin-bottom: 300px;
   }
 
-  .bookmark-section img {
+  .bookmark-section__img {
     width: 50%;
     display: block;
     margin-left: auto;
@@ -560,7 +553,7 @@ footer button {
     padding: 30px;
   }
 
-  .bookmark-section p {
+  .bookmark-section__description {
     margin: 0;
     line-height: 40px;
     font-size: 27px;
@@ -601,20 +594,20 @@ footer button {
   }
 
   /* download extensions section */
-  .download-extension-section p {
+  .download-extension-section__description {
     margin: 0;
     line-height: 40px;
     font-size: 27px;
     padding: 0px 315px;
   }
 
-  .extension-options {
+  .download-extension-section__extension-options {
     display: flex;
     margin: 50px 50px;
     justify-content: center;
   }
 
-  .minimum-version {
+  .download-extension-section__minimum-version-div {
     font-size: 25px;
     margin-bottom: inherit;
   }
@@ -629,21 +622,22 @@ footer button {
     top: 200px;
   }
 
-  .install-extension-btn {
+  .download-extension-section__install-btn {
     font-size: larger;
     cursor: pointer;
   }
 
   /* faq section */
-  .faq {
-    margin: 30px 340px;
-  }
 
   .faq-section {
     margin: 450px 70px 100px 70px;
   }
 
-  .faq-section section {
+  .faq-section__faq {
+    margin: 30px 340px;
+  }
+
+  .faq-section__description {
     padding: 0px 366px;
     font-size: 27px;
     line-height: 40px;
@@ -658,7 +652,7 @@ footer button {
     font-size: x-large;
   }
 
-  .faq-question {
+  .faq-section__question {
     font-size: x-large;
   }
 
@@ -674,12 +668,12 @@ footer button {
     letter-spacing: 8px;
   }
 
-  .stay-uptodate-with-us-section p {
+  .stay-uptodate-with-us-section__description {
     font-size: 40px;
     padding: 5px 360px;
   }
 
-  .contact-us-section {
+  .stay-uptodate-with-us-section__contact-us-div {
     display: flex;
     flex-direction: row;
   }

@@ -47,10 +47,10 @@ easySharingButton.addEventListener("click", function () {
 });
 
 // FAQ SECTION TOGGLES
-const faqQuestions = document.querySelectorAll(".faq-question");
+const faqQuestions = document.querySelectorAll(".faq-section__question");
 
 for (const faqQuestion of faqQuestions) {
-  const faqAnswer = faqQuestion.querySelector(".faq-answer");
+  const faqAnswer = faqQuestion.querySelector(".faq-section__answer");
   const openArrow = faqQuestion.querySelector(".arrow");
 
   faqQuestion.addEventListener("click", function () {
