@@ -32,20 +32,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<img width="1414" alt="Screen Shot 2023-08-10 at 12 16 23 PM" src="https://github.com/LBuchananCates/bookmark-landing-page/assets/100169368/c493b504-ab5e-44da-a27b-67c558e10661">
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: brilliant-peony-6758cf.netlify.app
 
 ## My process
 
@@ -56,30 +48,128 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+How to use Javascript for mobile menu slider, how to toggle open and close FAQ section questions, and user verification through email when clicking 'contact us" button
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+- proud of making easy to remember class names for mobile & desktop menu styles (both open and close) because desktop menu is "expanded mobile menu items" and mobile menu is just "menu" + hamburger icon and hidden menu items, if that makes any sense
+<nav class="nav-bar-mobile">
+      <img
+        src="./images/logo-bookmark.svg"
+        alt="bookmark-logo"
+        class="bookmark-logo"
+      />
+      <img
+        src="./images/icon-hamburger.svg"
+        alt="hamburger-menu"
+        class="hamburger-menu-icon"
+      />
+      <div class="mobile-menu close-menu">
+        <div class="mobile-menu-open-nav">
+          <img
+            src="./images/logo-bookmark.svg"
+            alt="logo-bookmark"
+            class="mobile-bookmark-logo"
+          />
+          <img
+            src="./images/icon-close.svg"
+            alt="icon-close"
+            class="icon-close"
+          />
+        </div>
+
+        <hr />
+        <button class="top-nav-features" id="features">Features</button>
+        <hr />
+        <button class="top-nav-pricing" id="pricing">Pricing</button>
+        <hr />
+        <button class="top-nav-contact" id="contact">Contact</button>
+        <hr />
+        <button class="top-nav-login" id="login">Login</button>
+
+        <div class="nav-social-media-buttons">
+          <img src="./images/icon-facebook.svg" alt="facebook-icon" />
+          <img src="./images/icon-twitter.svg" alt="twitter-icon" />
+        </div>
+      </div>
+    </nav>
+
+    <nav class="nav-bar-desktop">
+      <img
+        src="./images/logo-bookmark.svg"
+        alt="bookmark-logo"
+        class="bookmark-logo"
+      />
+      <div class="nav-bar-desktop-buttons">
+        <button class="desktop-nav-features">Features</button>
+        <button class="desktop-nav-pricing">Pricing</button>
+        <button class="desktop-nav-contact">Contact</button>
+        <button class="desktop-nav-login">Login</button>
+      </div>
+    </nav>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+- very proud of the transitions which were optional, but I wanted to reproduce the sliding side menus often seen on mobile websites
+- also making sure that no matter the height of the screen, that the open and close menu didn't show white space at bottom of page
+- as mentioned above, proud of the way I labeled the classes for html elements; naming classes is definitely a skill and very important for organization, if someone else needed to identify or locate elements on the page
+
+/* opens menu when click hamburger */
+.open-menu {
+  background-color: hsl(229, 31%, 21%, 0.9);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  transition: margin-right 0.5s ease;
+  margin-left: -9px;
+  height: 100%;
+}
+
+/* closes menu when click X close button WORKS*/
+.close-menu {
+  background-color: hsl(229, 31%, 21%, 0.9);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  transition: margin-right 0.5s ease;
+  margin-left: -103%;
+  height: 100%;
 }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+- VERY proud of finding out how to use RegEx for email verification
+- the "else" conditions were a challenge to code out before realizing I needed to think of it step-by-step:
+> removing valid class, adding invalid class (red), followed by error message display, then validating email if everything correct
+
+// EMAIL VERIFICATION
+const email = document.querySelector(
+  ".stay-uptodate-with-us-section__input__email"
+);
+const errorMsg = document.querySelector(".email__error-message");
+const contactUsButton = document.querySelector(".contact-us-btn");
+
+let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+function validation() {
+  if (email.value.match(pattern)) {
+    email.classList.add("valid");
+    email.classList.remove("invalid");
+    errorMsg.style.display = "none";
+  } else {
+    email.classList.remove("valid");
+    email.classList.add("invalid");
+    errorMsg.style.display = "flex";
+  }
 }
+contactUsButton.addEventListener("click", validation);
+
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
