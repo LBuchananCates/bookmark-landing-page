@@ -1,7 +1,5 @@
 # Frontend Mentor - Bookmark landing page solution
 
-This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -35,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: brilliant-peony-6758cf.netlify.app
+- Live Site URL: [click here](brilliant-peony-6758cf.netlify.app)
 
 ## My process
 
@@ -52,10 +50,9 @@ Users should be able to:
 
 How to use Javascript for mobile menu slider, how to toggle open and close FAQ section questions, and user verification through email when clicking 'contact us" button
 
-To see how you can add code snippets, see below:
 
+- proud of making easy to remember class names for mobile & desktop menu styles (both open and close) because desktop menu is "expanded mobile menu items" and mobile menu is just "menu" + hamburger icon and hidden menu items
 ```html
-- proud of making easy to remember class names for mobile & desktop menu styles (both open and close) because desktop menu is "expanded mobile menu items" and mobile menu is just "menu" + hamburger icon and hidden menu items, if that makes any sense
 <nav class="nav-bar-mobile">
       <img
         src="./images/logo-bookmark.svg"
@@ -111,10 +108,11 @@ To see how you can add code snippets, see below:
       </div>
     </nav>
 ```
-```css
+
 - very proud of the transitions which were optional, but I wanted to reproduce the sliding side menus often seen on mobile websites
 - also making sure that no matter the height of the screen, that the open and close menu didn't show white space at bottom of page
 - as mentioned above, proud of the way I labeled the classes for html elements; naming classes is definitely a skill and very important for organization, if someone else needed to identify or locate elements on the page
+```css
 
 /* opens menu when click hamburger */
 .open-menu {
@@ -142,10 +140,11 @@ To see how you can add code snippets, see below:
   height: 100%;
 }
 ```
-```js
+
 - VERY proud of finding out how to use RegEx for email verification
 - the "else" conditions were a challenge to code out before realizing I needed to think of it step-by-step:
-> removing valid class, adding invalid class (red), followed by error message display, then validating email if everything correct
+- removing valid class, adding invalid class (red), followed by error message display, then validating email if everything correct
+```js
 
 // EMAIL VERIFICATION
 const email = document.querySelector(
@@ -173,7 +172,7 @@ contactUsButton.addEventListener("click", validation);
 
 ### Continued development
 
-Became more comfortable with if/else statements and adding/removing classes for styling, but 
+Became more comfortable with if/else statements and adding/removing classes for styling
 
 ### Useful resources
 
